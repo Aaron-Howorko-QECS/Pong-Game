@@ -1,7 +1,5 @@
 //Global Variables
-// if ballpos < paddlex
-// ballx = _
-// bally = _
+
 //Ball variables
 boolean [] keys = new boolean[4];
 int rad = 15;
@@ -10,6 +8,7 @@ float Xspeed = int(random(1, 3));
 float Yspeed = int(random(1, 3));
 int ballXDirection = 1;
 int ballYDirection = 1;
+PFont font;
 
 // Paddle variables
 int paddle1X;
@@ -32,19 +31,15 @@ void setup() {
 }
 
 void draw() {
+  background(255);
   Ball_Move();
   Paddle_Move();
   Paddle_Collide();
+  Ball_Score();
+  Score();
 
   fill(0);
-  background(255);
   ellipse(ballX, ballY, rad, rad);
   rect(paddle1X, paddle1Y, 25, 100);
   rect(paddle2X, paddle2Y, 25, 100);
 }
-
-
-
-
-
-//keypressed, paddlemove, variables
