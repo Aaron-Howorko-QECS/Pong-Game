@@ -1,5 +1,6 @@
 void keyPressed() {
 
+  // using keys boolean makes paddles move smoothly
   if (key == 'w'|| key == 'W') {
     keys[0] = true;
   } else if (key == 's'|| key == 'S') {
